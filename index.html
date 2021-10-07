@@ -1,95 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1,
-  maximum-scale=5"
-    />
-
-    <link rel="icon" href="devchallenges.png" />
-
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edie Homepage</title>
     <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://devchallenges.io/"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
       rel="stylesheet"
     />
-
-    <title>Devchallenges</title>
-
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-
-      ul {
-        padding-left: 24px;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
-
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
-
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .welcome-text a {
-        color: #f7542e;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
-
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
+    <header>
+      <div class="header-logo">
+        <span class="logo">Edie</span>
       </div>
+      <div class="header-menu">
+        <div class="header-mobile-menu">
+          <span class="material-icons-round"> menu </span>
+        </div>
+      </div>
+    </header>
 
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
-    </div>
+    <main>
+      <section id="home">
+        <div class="home-title">
+          <p>Unhappy with you website?</p>
+          <h2 class="head-title">We create beautiful and fast web services</h2>
+        </div>
+        <div class="home-image">
+          <img src="heroImage.jpg" alt="heroImage" />
+        </div>
+        <div class="home-details">
+          <h2 class="head-title">Story, emotion and purpose</h2>
+          <p>
+            We help transform your ideas into real world applications that will
+            outperform your toughest competition and help you achieve your
+            strategic goals in short period of time.
+          </p>
+          <form>
+            <label for="contact-email" class="contact-label"
+              >Want us to contact you?</label
+            >
+            <div class="contact-inputs">
+              <input
+                type="email"
+                name="email"
+                id="contact-email"
+                placeholder="Email"
+              />
+              <input type="submit" value="Join" class="contact-submit" />
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="services-title">
+          <h2 class="head-title">We offer high demand services</h2>
+        </div>
+
+        <div class="service">
+          <div class="service-content">
+            <div class="service-icon">
+              <span class="material-icons-round"> edit </span>
+            </div>
+            <h4 class="service-title">UI/UX Design</h4>
+            <p class="service-details">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a
+              metus ac nulla consequat aliquet id quis turpis.
+            </p>
+            <button class="service-button">Get started</button>
+          </div>
+        </div>
+
+        <div class="service">
+          <div class="service-content">
+            <div class="service-icon">
+              <span class="material-icons-round"> code </span>
+            </div>
+            <h4 class="service-title">Front End</h4>
+            <p class="service-details">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a
+              metus ac nulla consequat aliquet id quis turpis.
+            </p>
+            <button class="service-button">Get started</button>
+          </div>
+        </div>
+
+        <div class="service">
+          <div class="service-content">
+            <div class="service-icon">
+              <span class="material-icons-round"> storage </span>
+            </div>
+            <h4 class="service-title">Back End</h4>
+            <p class="service-details">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a
+              metus ac nulla consequat aliquet id quis turpis.
+            </p>
+            <button class="service-button">Get started</button>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
