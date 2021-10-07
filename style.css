@@ -88,7 +88,7 @@ section#home .home-details form {
   max-width: 350px;
 }
 
-section#home .home-details .contact-label {
+section#home .home-details form .contact-label {
   display: block;
   font-size: 10px;
   font-weight: 500;
@@ -106,8 +106,9 @@ section#home .home-details form .contact-inputs{
 
 }
 
-section#home .home-details #contact-email {
+section#home .home-details form .contact-inputs #contact-email {
   box-sizing: border-box;
+  min-width: 125px;
   border: none;
   border-radius: 12px;
   background-color: #f2f2f2;
@@ -118,18 +119,18 @@ section#home .home-details #contact-email {
   padding-left: 20px;
 }
 
-section#home .home-details #contact-email::placeholder {
+section#home .home-details form .contact-inputs #contact-email::placeholder {
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
   color: #bdbdbd;
 }
 
-section#home .home-details #contact-email:focus {
+section#home .home-details form .contact-inputs #contact-email:focus {
   outline: none;
 }
 
-section#home .home-details .contact-submit {
+section#home .home-details form .contact-inputs .contact-submit {
   width: 70px;
   min-width: 70px;
   height: 39px;
