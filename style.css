@@ -13,6 +13,7 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -25,6 +26,83 @@ body {
   line-height: 36px;
   color: #333;
 }
+
+.black-logo {
+  font-family: "Heebo", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 35px;
+  color: #333;
+}
+
+.white-logo {
+  font-family: "Heebo", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 35px;
+  color: #f2f2f2;
+}
+
+
+form#contact-form {
+  max-width: 350px;
+}
+
+form#contact-form .contact-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 15px;
+  color: #828282;
+}
+
+form#contact-form .contact-inputs {
+  height: 47px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+}
+
+form#contact-form .contact-inputs #contact-email {
+  box-sizing: border-box;
+  min-width: 125px;
+  border: none;
+  border-radius: 12px;
+  background-color: #f2f2f2;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #4f4f4f;
+  padding-left: 20px;
+}
+
+form#contact-form .contact-inputs #contact-email::placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #bdbdbd;
+}
+
+form#contact-form .contact-inputs #contact-email:focus {
+  outline: none;
+}
+
+form#contact-form .contact-inputs .contact-submit {
+  width: 70px;
+  min-width: 70px;
+  height: 39px;
+  background-color: #2d9cdb;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #f2f2f2;
+  margin-right: 4px;
+}
+
 /* -------------------- */
 /* HEADER */
 /* -------------------- */
@@ -34,25 +112,48 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 16px;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
 }
 
-header .header-logo .logo {
-  font-family: "Heebo", sans-serif;
-  font-size: 24px;
-  font-weight: 800;
-  line-height: 35px;
-  color: #333;
+header .header-menu .header-mobile-menu #header-mobile-menu-content {
+  position: absolute;
+  left: 100%;
+  padding: 20px 50px;
+  width: 100%;
+  background-color: #fff;
+}
+
+header .header-menu .header-mobile-menu #header-mobile-menu-content ul{
+  list-style: none;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+header .header-menu .header-mobile-menu #header-mobile-menu-content ul li a{
+  text-decoration: none;
+  color: #4f4f4f;
+}
+
+header .header-menu .header-mobile-menu #header-mobile-menu-content ul li a:hover{
+  color: #2d9cdb;
 }
 
 /* -------------------- */
 /* HOME SECTION */
 /* -------------------- */
 
+section#home {
+  padding-top: 48px;
+}
+
 section#home .home-title {
   padding: 40px 50px 15px 50px;
 }
 
-section#home .home-title p {
+section#home .home-title span {
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
@@ -84,90 +185,35 @@ section#home .home-details p {
   margin: 30px 0;
 }
 
-section#home .home-details form {
-  max-width: 350px;
-}
-
-section#home .home-details form .contact-label {
-  display: block;
-  font-size: 10px;
-  font-weight: 500;
-  line-height: 15px;
-  color: #828282;
-}
-
-section#home .home-details form .contact-inputs{
-  height: 47px;
-  background-color: #f2f2f2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 12px;
-
-}
-
-section#home .home-details form .contact-inputs #contact-email {
-  box-sizing: border-box;
-  min-width: 125px;
-  border: none;
-  border-radius: 12px;
-  background-color: #f2f2f2;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 21px;
-  color: #4f4f4f;
-  padding-left: 20px;
-}
-
-section#home .home-details form .contact-inputs #contact-email::placeholder {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 21px;
-  color: #bdbdbd;
-}
-
-section#home .home-details form .contact-inputs #contact-email:focus {
-  outline: none;
-}
-
-section#home .home-details form .contact-inputs .contact-submit {
-  width: 70px;
-  min-width: 70px;
-  height: 39px;
-  background-color: #2d9cdb;
-  border: none;
-  border-radius: 12px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 21px;
-  color: #f2f2f2;
-  margin-right: 4px;
-}
-
 /* -------------------- */
 /* SERVICES SECTION */
 /* -------------------- */
 
 section#services {
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
-section#services .services-title{
-  max-width: 260px;
+section#services .services-title {
+  max-width: 310px;
   padding: 0 50px;
 }
 
-section#services .service{
+section#services .services-details {
+  display: flex;
+  flex-direction: column;
+}
+
+section#services .services-details .service {
   max-width: 340px;
-  margin: 50px auto;
+  margin: 50px 15px;
   border-radius: 24px;
 }
 
-section#services .service .service-content{
+section#services .services-details .service .service-content {
   padding: 40px 35px;
 }
 
-section#services .service .service-content .service-icon{
+section#services .services-details .service .service-content .service-icon {
   width: 67px;
   height: 67px;
   display: flex;
@@ -177,13 +223,18 @@ section#services .service .service-content .service-icon{
   margin-bottom: 35px;
 }
 
-section#services .service .service-content .service-icon span{
+section#services
+  .services-details
+  .service
+  .service-content
+  .service-icon
+  span {
   width: 27px;
   height: 27px;
   color: #fff;
 }
 
-section#services .service .service-content .service-title{
+section#services .services-details .service .service-content .service-title {
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
@@ -191,7 +242,7 @@ section#services .service .service-content .service-title{
   margin-bottom: 24px;
 }
 
-section#services .service .service-content .service-details{
+section#services .services-details .service .service-content .service-details {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -199,10 +250,10 @@ section#services .service .service-content .service-details{
   margin-bottom: 30px;
 }
 
-section#services .service .service-content .service-button{
+section#services .services-details .service .service-content .service-button {
   border: none;
   border-radius: 12px;
-  background-color: #E0E0E0;
+  background-color: #e0e0e0;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -210,23 +261,266 @@ section#services .service .service-content .service-button{
   padding: 10px 12px;
 }
 
-section#services .service:nth-child(2) .service-content .service-icon{
-  background-color: #2D9CDB;
+section#services
+  .services-details
+  .service:nth-child(1)
+  .service-content
+  .service-icon {
+  background-color: #2d9cdb;
 }
 
-section#services .service:nth-child(3) .service-content .service-icon{
-  background-color: #27AE60;
+section#services
+  .services-details
+  .service:nth-child(2)
+  .service-content
+  .service-icon {
+  background-color: #27ae60;
 }
 
-section#services .service:nth-child(4) .service-content .service-icon{
-  background-color: #EB5757;
+section#services
+  .services-details
+  .service:nth-child(3)
+  .service-content
+  .service-icon {
+  background-color: #eb5757;
 }
 
-section#services .service:hover{
+section#services .services-details .service:hover {
   box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
 }
 
-section#services .service:hover .service-content .service-button{
-  background-color: #2D9CDB;
+section#services
+  .services-details
+  .service:hover
+  .service-content
+  .service-button {
+  background-color: #2d9cdb;
   color: #fff;
+}
+
+/* -------------------- */
+/* WORKS SECTION*/
+/* -------------------- */
+
+section#works {
+  padding-top: 100px;
+}
+
+section#works .works-title {
+  max-width: 260px;
+  padding: 0 50px;
+}
+
+section#works .works-details {
+  display: flex;
+  flex-direction: column;
+}
+
+section#works .works-details .work {
+  max-width: 535px;
+  margin: 40px 12px 0 12px;
+}
+
+section#works .works-details .work .work-image img {
+  width: 100%;
+  border-radius: 24px;
+}
+
+section#works .works-details .work .work-category {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+  color: #828282;
+}
+
+section#works .works-details .work .work-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  color: #333;
+}
+
+section#works .works-see-more {
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+  margin-left: 10px;
+}
+
+section#works .works-see-more a {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  color: #2d9cdb;
+  text-decoration: none;
+}
+
+section#works .works-see-more span {
+  color: #2d9cdb;
+}
+
+/* -------------------- */
+/* CLIENTS SECTION */
+/* -------------------- */
+
+section#clients {
+  padding-top: 100px;
+  margin: 0 10px;
+}
+
+section#clients .team-content .team-title {
+  max-width: 280px;
+}
+
+section#clients .team-content .team-title span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  color: #eb5757;
+  margin-bottom: 8px;
+}
+
+section#clients .team-content .team-title h2 {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 54px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+section#clients .team-content .team-title p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #4f4f4f;
+}
+
+section#clients .team-content .team-image {
+  display: flex;
+  margin-top: 36px;
+}
+
+section#clients .team-content .first-column {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+section#clients .team-content .second-column {
+  width: 50%;
+  margin-left: 15px;
+}
+
+section#clients .team-content .first-column .person3 {
+  width: 105%;
+  border-radius: 24px;
+}
+
+section#clients .team-content .second-column .person1 {
+  width: 85%;
+  border-radius: 24px;
+}
+
+section#clients .team-content .second-column .person2 {
+  width: 95%;
+  border-radius: 24px;
+}
+
+section#clients .client-comment {
+  margin-top: 100px;
+}
+
+section#clients .client-comment blockquote p {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  color: #333;
+}
+
+section#clients .client-comment blockquote p::before {
+  content: "\201C";
+}
+
+section#clients .client-comment blockquote p::after {
+  content: "\201D";
+}
+
+section#clients .client-comment .client-info {
+  display: flex;
+  margin-top: 36px;
+}
+
+section#clients .client-comment .client-info .client-image img {
+  width: 82px;
+  border-radius: 12px;
+}
+
+section#clients .client-comment .client-info .client-name {
+  margin-left: 30px;
+}
+
+section#clients .client-comment .client-info .client-name h4 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  color: #333;
+}
+
+section#clients .client-comment .client-info .client-name p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  color: #828282;
+}
+
+
+/* -------------------- */
+/* FOOTER */
+/* -------------------- */
+
+footer {
+  margin-top: 100px;
+  background-color: #100E1D;
+  color: #f2f2f2;
+  padding: 36px 40px 24px 40px;
+}
+
+footer .footer-content .footer-menu {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #fff;
+}
+
+footer .footer-content .footer-menu ul {
+  list-style: none;
+}
+
+footer .footer-content .footer-socials {
+  margin-top: 60px;
+}
+
+footer .footer-content .footer-socials .footer-socials-logo {
+  margin-top: 8px;
+}
+
+footer .footer-content .footer-socials .footer-socials-logo span:nth-child(2){
+  margin: 0 10px;
+}
+
+footer .footer-content .footer-contact {
+  margin: 65px 0 150px 0;
+}
+
+footer .copyright {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  text-align: center;
+}
+
+footer .copyright strong{
+  font-weight: 700;
+  text-decoration: underline;
 }

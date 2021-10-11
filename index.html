@@ -14,11 +14,22 @@
   <body>
     <header>
       <div class="header-logo">
-        <span class="logo">Edie</span>
+        <span class="black-logo">Edie</span>
       </div>
       <div class="header-menu">
         <div class="header-mobile-menu">
-          <span class="material-icons-round"> menu </span>
+          <span class="material-icons-round" id="header-mobile-menu-button" onclick="open_menu()">
+            menu
+          </span>
+          <div id="header-mobile-menu-content">
+            <ul>
+              <li><a href="#home">Home</li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#works">Our Works</a></li>
+              <li><a href="#clients">Clients</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -26,7 +37,7 @@
     <main>
       <section id="home">
         <div class="home-title">
-          <p>Unhappy with you website?</p>
+          <span>Unhappy with you website?</span>
           <h2 class="head-title">We create beautiful and fast web services</h2>
         </div>
         <div class="home-image">
@@ -39,7 +50,7 @@
             outperform your toughest competition and help you achieve your
             strategic goals in short period of time.
           </p>
-          <form>
+          <form id="contact-form">
             <label for="contact-email" class="contact-label"
               >Want us to contact you?</label
             >
@@ -60,49 +71,179 @@
         <div class="services-title">
           <h2 class="head-title">We offer high demand services</h2>
         </div>
-
-        <div class="service">
-          <div class="service-content">
-            <div class="service-icon">
-              <span class="material-icons-round"> edit </span>
+        <div class="services-details">
+          <div class="service">
+            <div class="service-content">
+              <div class="service-icon">
+                <span class="material-icons-round"> edit </span>
+              </div>
+              <h4 class="service-title">UI/UX Design</h4>
+              <p class="service-details">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a
+                metus ac nulla consequat aliquet id quis turpis.
+              </p>
+              <button class="service-button">Get started</button>
             </div>
-            <h4 class="service-title">UI/UX Design</h4>
-            <p class="service-details">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a
-              metus ac nulla consequat aliquet id quis turpis.
-            </p>
-            <button class="service-button">Get started</button>
           </div>
-        </div>
 
-        <div class="service">
-          <div class="service-content">
-            <div class="service-icon">
-              <span class="material-icons-round"> code </span>
+          <div class="service">
+            <div class="service-content">
+              <div class="service-icon">
+                <span class="material-icons-round"> code </span>
+              </div>
+              <h4 class="service-title">Front End</h4>
+              <p class="service-details">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a
+                metus ac nulla consequat aliquet id quis turpis.
+              </p>
+              <button class="service-button">Get started</button>
             </div>
-            <h4 class="service-title">Front End</h4>
-            <p class="service-details">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a
-              metus ac nulla consequat aliquet id quis turpis.
-            </p>
-            <button class="service-button">Get started</button>
           </div>
-        </div>
 
-        <div class="service">
-          <div class="service-content">
-            <div class="service-icon">
-              <span class="material-icons-round"> storage </span>
+          <div class="service">
+            <div class="service-content">
+              <div class="service-icon">
+                <span class="material-icons-round"> storage </span>
+              </div>
+              <h4 class="service-title">Back End</h4>
+              <p class="service-details">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a
+                metus ac nulla consequat aliquet id quis turpis.
+              </p>
+              <button class="service-button">Get started</button>
             </div>
-            <h4 class="service-title">Back End</h4>
-            <p class="service-details">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a
-              metus ac nulla consequat aliquet id quis turpis.
-            </p>
-            <button class="service-button">Get started</button>
           </div>
         </div>
       </section>
+
+      <section id="works">
+        <div class="works-title">
+          <h2 class="head-title">Good design means good business</h2>
+        </div>
+        <div class="works-details">
+          <div class="work">
+            <div class="work-image">
+              <img src="smarthome.jpg" alt="smarthome" />
+            </div>
+            <p class="work-category">Full stack application</p>
+            <h4 class="work-title">Smart home dashboard</h4>
+          </div>
+
+          <div class="work">
+            <div class="work-image">
+              <img src="onboard.png" alt="smarthome" />
+            </div>
+            <p class="work-category">UX/UI design</p>
+            <h4 class="work-title">Onboard application</h4>
+          </div>
+
+          <div class="work">
+            <div class="work-image">
+              <img src="booking.png" alt="smarthome" />
+            </div>
+            <p class="work-category">Mobile application</p>
+            <h4 class="work-title">Booking system</h4>
+          </div>
+
+          <div class="work">
+            <div class="work-image">
+              <img src="juice-product.png" alt="smarthome" />
+            </div>
+            <p class="work-category">Front End application</p>
+            <h4 class="work-title">Juice product homepage</h4>
+          </div>
+        </div>
+        <div class="works-see-more">
+          <a href="#">see more </a>
+          <span class="material-icons-round"> arrow_right_alt </span>
+        </div>
+      </section>
+
+      <section id="clients">
+        <div class="team-content">
+          <div class="team-title">
+            <span>Meet the team</span>
+            <h2>We are chilled and a laidback team</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+
+          <div class="team-image">
+            <div class="first-column">
+              <img src="person3.png" alt="person 3" class="person3" />
+            </div>
+            <div class="second-column">
+              <img src="person1.png" alt="person 1" class="person1" />
+              <img src="person2.png" alt="person 2" class="person2" />
+            </div>
+          </div>
+        </div>
+        <div class="client-comment">
+          <blockquote>
+            <p>
+              Fast and outstanding results. Edie understands their customer's
+              needs. They have a young and talented team.
+            </p>
+          </blockquote>
+          <div class="client-info">
+            <div class="client-image">
+              <img src="person4.png" alt="person4" />
+            </div>
+            <div class="client-name">
+              <h4>Carlos Tran</h4>
+              <p>The Decorate Gatsby</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact">
+        <div class="footer-content">
+          <div class="footer-menu">
+            <ul>
+              <li>Home</li>
+              <li>Services</li>
+              <li>Our Works</li>
+              <li>Clients</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+          <div class="footer-socials">
+            <span class="white-logo">Edie</span>
+            <div class="footer-socials-logo">
+              <span class="instagram"
+                ><img src="instagram.svg" alt="instagram"
+              /></span>
+              <span class="linkedin"
+                ><img src="linkedin.svg" alt="linkedin"
+              /></span>
+              <span class="twitter"
+                ><img src="twitter.svg" alt="twitter"
+              /></span>
+            </div>
+          </div>
+          <div class="footer-contact">
+            <form id="contact-form">
+              <label for="contact-email" class="contact-label"
+                >Want us to contact you?</label
+              >
+              <div class="contact-inputs">
+                <input
+                  type="email"
+                  name="email"
+                  id="contact-email"
+                  placeholder="Email"
+                />
+                <input type="submit" value="Join" class="contact-submit" />
+              </div>
+            </form>
+          </div>
+        </div>
+        <p class="copyright">
+          created by <strong>colaboy99</strong> - devChallenges.io
+        </p>
+      </footer>
     </main>
+
+    <script src="app.js"></script>
   </body>
 </html>
