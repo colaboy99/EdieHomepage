@@ -102,7 +102,7 @@ form#contact-form .contact-inputs .contact-submit {
   margin-right: 4px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .head-title {
     font-size: 48px;
     line-height: 72px;
@@ -216,13 +216,11 @@ header .header-menu .header-desktop-menu ul li a {
   color: #333;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1440px) {
   header {
     padding: 20px 50px;
   }
-}
 
-@media screen and (min-width: 1024px) {
   header .header-menu .header-mobile-menu {
     display: none;
   }
@@ -242,7 +240,7 @@ section#home {
 
 section#home .home-title {
   margin: 40px 50px 15px 50px;
-  max-width: 280px;
+  max-width: 540px;
 }
 
 section#home .home-title span {
@@ -274,25 +272,13 @@ section#home .home-details p {
   margin: 30px 0;
 }
 
-@media screen and (min-width: 768px) {
-  section#home .home-title {
-    margin: 40px 100px;
-  }
-
-  section#home .home-details {
-    margin: 40px 100px;
-    max-width: 360px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   section#home {
     padding-top: 96px;
   }
 
   section#home .home-title {
-    margin: 40px 150px;
-    max-width: 540px;
+    margin: 40px 270px;
   }
 
   section#home .home-title span {
@@ -305,24 +291,14 @@ section#home .home-details p {
   }
 
   section#home .home-details {
-    margin: 40px 150px;
+    margin: 40px 270px;
+    max-width: 360px;
   }
 
   section#home .home-details p {
     font-size: 18px;
     line-height: 27px;
     margin: 42px 0;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  section#home .home-title {
-    margin: 40px 270px;
-  }
-
-  section#home .home-details {
-    margin: 40px 270px;
-    max-width: 360px;
   }
 }
 
@@ -335,7 +311,7 @@ section#services {
 }
 
 section#services .services-title {
-  max-width: 340px;
+  max-width: 350px;
   margin: 0 50px;
 }
 
@@ -445,34 +421,11 @@ section#services
   color: #fff;
 }
 
-@media screen and (min-width: 768px) {
-  section#services .services-title {
-    margin: 0 100px;
-  }
-
-  section#services .services-details .service {
-    margin: 50px 150px;
-  }
-}
-
 @media screen and (min-width: 1024px) {
-  section#services {
-    padding-top: 150px;
-  }
-
-  section#services .services-title h2 {
-    font-size: 36px;
-    line-height: 54px;
-  }
-
   section#services .services-details {
     display: flex;
     flex-direction: row;
-    margin: 0 100px;
-  }
-
-  section#services .services-details .service {
-    margin: 50px 15px;
+    margin: 0 165px;
   }
 }
 
@@ -486,8 +439,15 @@ section#services
     margin: 0 165px;
   }
 
+  section#services .services-title h2 {
+    font-size: 36px;
+    line-height: 54px;
+  }
+
   section#services .services-details {
-    margin: 0 165px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 100px;
   }
 }
 
@@ -559,27 +519,14 @@ section#works .works-see-more span {
   color: #2d9cdb;
 }
 
-@media screen and (min-width: 768px) {
-  section#works .works-title {
-    margin: 0 100px;
-  }
-
-  section#works .works-details {
-    margin: 0 150px;
-  }
-
-  section#works .works-see-more {
-    margin-left: 100px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   section#works {
-    padding-top: 150px;
+    padding-top: 200px;
   }
 
   section#works .works-title {
     max-width: 450px;
+    margin: 0 165px;
   }
 
   section#works .works-title h2 {
@@ -601,7 +548,7 @@ section#works .works-see-more span {
   }
 
   section#works .works-details .work:nth-child(odd) {
-    margin: 100px 10px 0px 0px;
+    margin: 150px 10px 0px 0px;
   }
 
   section#works .works-details .work:nth-child(even) {
@@ -616,20 +563,7 @@ section#works .works-see-more span {
     margin-right: 210px;
     margin-left: 0;
   }
-}
 
-@media screen and (min-width: 1440px) {
-  section#works {
-    padding-top: 200px;
-  }
-
-  section#works .works-title {
-    margin: 0 165px;
-  }
-
-  section#works .works-details .work:nth-child(odd) {
-    margin: 150px 10px 0px 0px;
-  }
 }
 
 /* -------------------- */
@@ -746,25 +680,10 @@ section#clients .client-comment .client-info .client-name p {
   color: #828282;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1440px) {
   section#clients {
-    padding-top: 100px;
-    margin: 0 100px;
-  }
-
-  section#clients .team-content .first-column {
-    margin-right: 10px;
-  }
-
-  section#clients .team-content .second-column .person1 {
-    margin-bottom: 5px;
-  }
-
-}
-
-@media screen and (min-width: 1024px) {
-  section#clients {
-    padding-top: 150px;
+    padding-top: 200px;
+    margin: 0 170px;
   }
 
   section#clients .team-content {
@@ -779,35 +698,16 @@ section#clients .client-comment .client-info .client-name p {
     width: 50%;
   }
 
-  section#clients .team-content .first-column {
-    margin-right: 20px;
-  }
-
-  section#clients .team-content .second-column .person1 {
-    margin-bottom: 10px;
-  }
-
-  section#clients .client-comment {
-    margin-top: 150px;
-    max-width: 900px;
-  }
-
-  section#clients .client-comment blockquote p {
-    font-size: 36px;
-    line-height: 54px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  section#clients {
-    padding-top: 200px;
-    margin: 0 170px;
-  }
-
   section#clients .client-comment {
     margin-top: 200px;
     max-width: 900px;
   }
+  
+  section#clients .client-comment blockquote p {
+    font-size: 36px;
+    line-height: 54px;
+  }
+
 }
 
 /* -------------------- */
@@ -866,9 +766,9 @@ footer .copyright strong {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   footer {
-    padding: 46px 100px 24px 100px;
+    padding: 46px 170px 24px 170px;
   }
 
   footer .footer-content {
@@ -886,11 +786,5 @@ footer .copyright strong {
 
   footer .copyright {
     margin-top: 120px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  footer {
-    padding: 46px 170px 24px 170px;
   }
 }
